@@ -3,9 +3,103 @@
 <head>
   <meta charset="UTF-8">
   <title>Title</title>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="singolo1.css">
 </head>
 <body>
-
-
+<header class="header">
+  <div class="content">
+    <div class="header__logo">
+      <a class="header__logo-link" href="#">
+        <div class="logo">
+          <h1 class="logo__text">SINGOLO<span class="logo__asterisk">*</span></h1>
+        </div>
+      </a>
+    </div>
+    <nav class="header__navigation">
+      <ul class="navigation">
+        <li class="navigation__link"><a class="navigation__link" href="#">HOME</a></li>
+        <li class="navigation__link"><a class="navigation__link" href="#services">SERVICES</a></li>
+        <li class="navigation__link"><a class="navigation__link" href="#portfolio">PORTFOLIO</a></li>
+        <li class="navigation__link"><a class="navigation__link" href="#about">ABOUT</a></li>
+        <li class="navigation__link"><a class="navigation__link" href="#contact">CONTACT</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<section class="slider">
+  <div class="content">
+    <div class="slider__navigation">
+      <a href="#left" class="slider__navigation-link">
+        <img class="slider__navigation-image-left" src="assets/slider_left.png" width="16" height="27" alt="left">
+      </a>
+    </div>
+    <div class="slider__vertical-frame">
+      <img class="slider__vertical-frame-image" src="assets/iphone_vert.png" width="240" height="483" alt="iPhone vertical">
+    </div>
+    <div class="slider__horizontal-frame">
+      <img class="slider__horizontal-frame-image" src="assets/iphone_hor.png" width="484" height="240" alt="iPhone horizontal">
+    </div>
+    <div class="slider__right-arrow">
+      <a href="#right" class="slider__navigation-link">
+        <img class="slider__navigation-image-right" src="assets/slider_right.png" width="16" height="27" alt="right">
+      </a>
+    </div>
+  </div>
+</section>
+<section class="services">
+  <div class="content">
+    <h2 class="services__header">Our Services</h2>
+    <p class="services__text"></p>
+    <div class="cards">
+      <figure class="cards__card">
+        <img class="cards__card-image" src="assets/pen.png" width="62" height="61" alt="Pencil">
+        <figcaption class="cards__card-caption">
+          <h3 class="cards__card-caption-header">Custom Design</h3>
+          <p class="cards__card-caption-text">Curabitur vestibulum eget mauris quis laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices
+            velit.</p>
+        </figcaption>
+      </figure>
+      <figure class="cards__card">
+        <img class="cards__card-image" src="assets/lightbulb.png" width="61" height="61" alt="Light bulb">
+        <figcaption class="cards__card-caption">
+          <h3 class="cards__card-caption-header">Inovative Ideas</h3>
+          <p class="cards__card-caption-text">Quisque luctus, quam eget molestie commodo, lacus purus cursus purus, nec rutrum tellus dolor id
+            lorem.</p>
+        </figcaption>
+      </figure>
+      <figure class="cards__card">
+        <img class="cards__card-image" src="assets/heart.png" width="62" height="61" alt="Heart">
+        <figcaption class="cards__card-caption">
+          <h3 class="cards__card-caption-header">Love Is The Answer</h3>
+          <p class="cards__card-caption-text">Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. Quisque
+            condimentum.</p>
+        </figcaption>
+      </figure>
+      <figure class="cards__card">
+        <img class="cards__card-image" src="assets/phone.png" width="62" height="61" alt="Phone">
+        <figcaption class="cards__card-caption">
+          <h3 class="cards__card-caption-header">Responsive Layout</h3>
+          <p class="cards__card-caption-text">Sed porttitor placerat rhoncus. In at nunc tellus. Maecenas blandit nunc ligula. Praesent elit leo.</p>
+        </figcaption>
+      </figure>
+      <figure class="cards__card">
+        <img class="cards__card-image" src="assets/bubble.png" width="61" height="61" alt="Bubble">
+        <figcaption class="cards__card-caption">
+          <h3 class="cards__card-caption-header">24 / 7 Support</h3>
+          <p class="cards__card-caption-text">Vivamus vel quam lacinia, tincidunt dui non, vehicula nisi. Nulla a sem erat. Pellentesque egestas
+            venenatis lorem .</p>
+        </figcaption>
+      </figure>
+      <figure class="cards__card">
+        <img class="cards__card-image" src="assets/star.png" width="62" height="61" alt="Star">
+        <figcaption class="cards__card-caption">
+          <h3 class="cards__card-caption-header">Feel Like A Star</h3>
+          <p class="cards__card-caption-text">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus.</p>
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
 </body>
 </html>
