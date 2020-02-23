@@ -1,10 +1,32 @@
+/*global*/
 html {
   font-family: 'Lato', 'Verdana', sans-serif;
   font-size: 10px;
 }
 
-body {
-  background-color: lightgray;
+.content {
+  box-sizing: border-box;
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.header__content {
+  margin-bottom: 6px;
+
+  display: flex;
+
+  background-color: #2d303a;
+  box-shadow: 0 6px #323746;
+}
+
+.slider__content {
+  display: flex;
+  background-color: #f06c64;
+}
+
+.services__content {
+  background-color: #f2f2f2;
 }
 
 /*Typo*/
@@ -54,11 +76,4 @@ body {
 
 .typo_weight_boldest {
   font-weight: 900;
-}
-
-.content {
-  max-width: 1020px;
-  box-sizing: border-box;
-  margin: 0 auto;
-  padding: 0;
 }
