@@ -118,6 +118,10 @@ a {
   margin-left: 13px;
 }
 
+.navigation__link:hover {
+  color: #f06c64;
+}
+
 .navigation__bullet {
   margin-left: 15px;
   line-height: 3;
