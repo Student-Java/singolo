@@ -19,6 +19,10 @@ a {
   text-decoration: none;
 }
 
+.link-transition {
+  transition: 2.27s ease-out;
+}
+
 .left_padding_fix_1px {
   padding-left: 1px;
 }
