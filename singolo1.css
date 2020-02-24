@@ -155,10 +155,12 @@ a {
 }
 
 .navigation__item:not(:last-child)::after {
-  content: '\00b7';
   display: block;
   position: absolute;
   right: -17px;
+  top: -1px;
+
+  content: '\00b7';
   color: #494e62;
 }
 
