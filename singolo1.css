@@ -102,7 +102,7 @@ a {
 }
 
 .header__content {
-  padding: 30px 40px 31px;
+  padding: 31px 40px 33px;
 
   display: flex;
   justify-content: space-between;
@@ -136,32 +136,34 @@ a {
 }
 
 .header__navigation {
-  letter-spacing: -0.27px;
 }
 
 .navigation {
   margin: 0;
-  padding-top: 13px;
+  padding-top: 12px;
   display: flex;
-  position: relative;
 
   list-style-type: none;
 }
 
 .navigation__item {
-  margin-left: 13px;
+  margin-left: 30px;
+  position: relative;
+  text-transform: uppercase;
+
+  letter-spacing: -0.2px;
+}
+
+.navigation__item:not(:last-child)::after {
+  content: '\00b7';
+  display: block;
+  position: absolute;
+  right: -17px;
+  color: #494e62;
 }
 
 .navigation__link:hover {
   color: var(--color-active);
-}
-
-.navigation__bullet {
-  margin-left: 15px;
-  line-height: 3;
-
-  font-size: 0.5rem;
-  color: #494e62;
 }
 
 .logo {
@@ -169,20 +171,20 @@ a {
 }
 
 .logo:after {
-  content: "*";
+  content: '*';
   color: var(--color-active);
 }
 
 .slider__navigation-image-left {
   margin-top: 1px;
-  background: url("assets/slider_left.png") no-repeat top left;
+  background: url('assets/slider_left.png') no-repeat top left;
   display: inline-block;
   height: 27px;
   width: 16px;
 }
 
 .slider__navigation-image-left:hover {
-  background: url("assets/slider_left_hovered.png") no-repeat top left;
+  background: url('assets/slider_left_hovered.png') no-repeat top left;
   display: inline-block;
   height: 27px;
   width: 16px;
@@ -190,14 +192,14 @@ a {
 
 .slider__navigation-image-right {
   margin-top: 1px;
-  background: url("assets/slider_right.png") no-repeat top left;
+  background: url('assets/slider_right.png') no-repeat top left;
   display: inline-block;
   height: 27px;
   width: 16px;
 }
 
 .slider__navigation-image-right:hover {
-  background: url("assets/slider_right_hovered.png") no-repeat top left;
+  background: url('assets/slider_right_hovered.png') no-repeat top left;
   display: inline-block;
   height: 27px;
   width: 16px;
@@ -206,7 +208,7 @@ a {
 .slider__vertical-frame {
   padding-left: 19px;
   position: relative;
-  background: url("assets/iphone_vert.png") no-repeat top left;
+  background: url('assets/iphone_vert.png') no-repeat top left;
   display: inline-block;
   height: 483px;
   width: 240px;
@@ -216,7 +218,7 @@ a {
   padding-right: 2px;
   padding-bottom: 1px;
   position: relative;
-  background: url("assets/iphone_hor.png") no-repeat top left;
+  background: url('assets/iphone_hor.png') no-repeat top left;
   display: inline-block;
   height: 240px;
   width: 483px;
