@@ -64,19 +64,19 @@ a {
   color: #666d89;
 }
 
-.typo_weight_light {
+.typo_weight_400 {
   font-weight: 400;
 }
 
-.typo_weight_lightest {
+.typo_weight_300 {
   font-weight: 300;
 }
 
-.typo_weight_bold {
-  font-weight: 700;
+.typo_weight_500 {
+  font-weight: 500;
 }
 
-.typo_weight_boldest {
+.typo_weight_900 {
   font-weight: 900;
 }
 
@@ -133,10 +133,6 @@ a {
   padding: 62px 40px 31px 40px;
 }
 
-.header__navigation {
-  letter-spacing: -0.2px;
-}
-
 .navigation {
   margin: 0;
   padding-top: 12px;
@@ -146,8 +142,9 @@ a {
 }
 
 .navigation__item {
-  margin-left: 30px;
+  margin-left: 31px;
   position: relative;
+  letter-spacing: -0.3px;
 
   text-transform: uppercase;
 }
@@ -241,6 +238,7 @@ a {
 .services__text {
   margin-top: 21px;
   margin-bottom: 21px;
+
   line-height: 3.0rem;
   text-align: justify;
 }
