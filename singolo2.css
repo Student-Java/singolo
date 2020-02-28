@@ -1,3 +1,16 @@
+/*
+* {
+  outline: 1px dashed rgba(128, 128, 128, 0.5);
+}
+
+*/
+
+:root {
+  --color-active: #f06c64;
+  --color-headers: #666d89;
+}
+
+
 /*global*/
 html {
   font-family: 'Lato', sans-serif;
@@ -21,6 +34,10 @@ a {
 
 .left_padding_fix_2px {
   padding-left: 2px;
+}
+
+.top_margin_fix_1px {
+  margin-top: 1px;
 }
 
 /*Typo*/
@@ -53,7 +70,7 @@ a {
 }
 
 .typo_color_headers {
-  color: #666d89;
+  color: var(--color-headers);
 }
 
 .typo_weight_400 {
@@ -68,6 +85,10 @@ a {
   font-weight: 500;
 }
 
+.typo_weight_600 {
+  font-weight: 600;
+}
+
 .typo_weight_900 {
   font-weight: 900;
 }
@@ -79,3 +100,118 @@ a {
   margin: 0 auto;
   padding: 0;
 }
+
+.portfolio {
+  background-color: #2d303a;
+  border-bottom: 6px solid #323746;
+}
+
+.portfolio__content {
+  padding: 63px 40px 66px 40px;
+}
+
+.portfolio__header {
+  letter-spacing: -0.14px;
+}
+
+.portfolio__text {
+  margin-top: 21px;
+  margin-bottom: 11px;
+
+  line-height: 3.0rem;
+  text-align: justify;
+}
+
+.tags {
+  margin: 0;
+  padding: 0 0 19px 0;
+  display: flex;
+
+  list-style-type: none;
+}
+
+.tags__tag-first,
+.tags__tag-second,
+.tags__tag-third,
+.tags__tag-fourth {
+  padding: 4px 6px;
+  margin-right: 10px;
+  position: relative;
+
+  border: 1px solid var(--color-headers);
+  border-radius: 5px;
+}
+.tags__tag-first {
+  padding-right: 6px;
+  margin-left: 1px;
+}
+.tags__tag-third {
+  padding-right: 4px;
+  padding-left: 5px;
+}
+.tags__tag-fourth {
+  padding-right: 3px;
+}
+
+.tags__tag-active {
+  color: #dedede;
+  border-color: #c5c5c5;
+}
+
+.tags__tag-first:hover,
+.tags__tag-second:hover,
+.tags__tag-third:hover,
+.tags__tag-fourth:hover {
+  cursor: pointer;
+  background-color: #c5c5c5;
+  transition: 0.3s ease-out;
+}
+
+.portfolio__works {
+  padding: 0;
+  margin: 0;
+  height: 602px;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+
+  list-style-type: none;
+}
+
+.portfolio__works-work {
+  padding-bottom: 18px;
+}
+
+.cards {
+  padding-top: 24px;
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.cards__card {
+  padding-bottom: 19px;
+  display: flex;
+  width: 32%;
+  height: 10.4rem;
+  overflow: hidden;
+
+  line-height: 2.1rem;
+  letter-spacing: -0.1px;
+}
+
+.cards__card-image {
+  padding-top: 1px;
+  padding-right: 18px;
+}
+
+.cards__card-text {
+  margin: 10px 0 13px 1px;
+
+  text-align: justify;
+  line-height: 2.1rem;
+}
+
