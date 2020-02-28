@@ -152,7 +152,7 @@ a {
 .navigation__link:hover {
   color: var(--color-active);
 
-  transition: 0.27s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .logo {
@@ -187,7 +187,7 @@ a {
 .slider__navigation-image-left:hover,
 .slider__navigation-image-right:hover {
   filter: brightness(80%);
-  transition: 0.27s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .slider__vertical-frame {
