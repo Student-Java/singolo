@@ -64,16 +64,16 @@ a {
   color: #666d89;
 }
 
-.typo_weight_400 {
-  font-weight: 400;
-}
-
 .typo_weight_300 {
   font-weight: 300;
 }
 
 .typo_weight_500 {
   font-weight: 500;
+}
+
+.typo_weight_600 {
+  font-weight: 600;
 }
 
 .typo_weight_900 {
@@ -93,18 +93,8 @@ a {
   background-color: #2d303a;
 }
 
-.header__hidden-header {
-  position: absolute !important;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
-  clip: rect(1px, 1px, 1px, 1px);
-  white-space: nowrap;
-}
-
 .header__content {
-  padding: 31px 40px 33px;
+  padding: 31px 40px 33px 40px;
   display: flex;
 
   justify-content: space-between;
@@ -130,7 +120,7 @@ a {
 }
 
 .services__content {
-  padding: 62px 40px 31px 40px;
+  padding: 62px 40px 30px 40px;
 }
 
 .navigation {
@@ -144,7 +134,7 @@ a {
 .navigation__item {
   margin-left: 31px;
   position: relative;
-  letter-spacing: -0.3px;
+  letter-spacing: -0.33px;
 
   text-transform: uppercase;
 }
@@ -255,6 +245,8 @@ a {
   padding-bottom: 19px;
   display: flex;
   width: 32%;
+  height: 10.4rem;
+  overflow: hidden;
 
   line-height: 2.1rem;
   letter-spacing: -0.1px;
