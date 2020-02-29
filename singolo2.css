@@ -182,7 +182,7 @@ a {
   padding-bottom: 18px;
 }
 
-.about-us__team { /*FIXME the same as card*/
+.team { /*FIXME the same as card*/
   padding-top: 24px;
   display: flex;
 
@@ -190,20 +190,15 @@ a {
   justify-content: space-between;
 }
 
-.about-us__team-member{
-  padding-bottom: 19px;
+.team__member{
+  padding-bottom: 34px;
   display: flex;
   width: 32%;
-  height: 10.4rem;
   overflow: hidden;
+  flex-direction: column;
 
   line-height: 2.1rem;
   letter-spacing: -0.1px;
-}
-
-.cards__card-image {
-  padding-top: 1px;
-  padding-right: 18px;
 }
 
 .cards__card-text {
@@ -216,4 +211,52 @@ a {
 .about-us { /*FIXME the same as .services*/
   border-bottom: 6px solid #ffffff;
   background-color: #f2f2f2;
+}
+
+.about-us__content {
+  padding: 62px 39px 7px 40px;
+}
+
+.about-us__header {
+  letter-spacing: -0.14px;
+}
+
+.about-us__text {
+  margin-top: 21px;
+  margin-bottom: 21px;
+
+  line-height: 3.0rem;
+  text-align: justify;
+}
+
+.team__member-name {
+  padding-top: 17px;
+  padding-bottom: 10px;
+  margin-left: -1px;
+}
+
+.team__member-description {
+  margin: 0;
+  padding: 0 0 24px 2px;
+
+  text-align: justify;
+  line-height: 2.1rem;
+}
+
+.social {
+  margin: 0;
+  padding: 0 0 19px 0;
+  display: flex;
+
+  list-style-type: none;
+}
+
+.social__link {
+  padding-left: 1px;
+  padding-right: 7px;
+}
+
+.social__link:hover {
+  filter: saturate(10);
+  transition: 0.3s ease-out;
 }
