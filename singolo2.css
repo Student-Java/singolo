@@ -170,7 +170,7 @@ a {
 }
 
 .about-us__content {
-  padding: 62px 39px 7px 40px;
+  padding: 62px 39px 26px 40px;
 }
 
 .about-us__header {
@@ -223,7 +223,7 @@ a {
 
 .social {
   margin: 0;
-  padding: 0 0 19px 0;
+  padding: 0;
   display: flex;
 
   list-style-type: none;
