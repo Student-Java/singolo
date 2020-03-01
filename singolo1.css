@@ -245,8 +245,6 @@ a {
   padding-bottom: 19px;
   display: flex;
   width: 32%;
-  height: 10.4rem;
-  overflow: hidden;
 
   line-height: 2.1rem;
   letter-spacing: -0.1px;
@@ -259,7 +257,9 @@ a {
 
 .cards__card-text {
   margin: 10px 0 13px 1px;
+  height: 6.3rem;
+  overflow: hidden;
 
-  text-align: justify;
   line-height: 2.1rem;
+  text-align: justify;
 }
