@@ -206,8 +206,10 @@ a {
   padding-top: 17px;
   padding-bottom: 10px;
   margin-left: -1px;
-  white-space: nowrap;
+  width: 300px;
 
+  white-space: nowrap;
+  text-overflow: ellipsis;
   overflow: hidden;
 }
 
