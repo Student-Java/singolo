@@ -1,16 +1,8 @@
-/*
-* {
-  outline: 1px dashed rgba(128, 128, 128, 0.5);
-}
-
-*/
-
 :root {
   --color-active: #f06c64;
   --color-headers: #666d89;
   --color-main: #767e9e;
 }
-
 
 /*global*/
 html {
@@ -47,11 +39,6 @@ a {
   line-height: 1;
 }
 
-.typo_size_xl {
-  font-size: 2.5rem;
-  line-height: 1;
-}
-
 .typo_size_md {
   font-size: 1.8rem;
   line-height: 1;
@@ -62,20 +49,12 @@ a {
   line-height: 1;
 }
 
-.typo_color_light {
-  color: #ffffff;
-}
-
 .typo_color_main {
   color: var(--color-main);
 }
 
 .typo_color_headers {
   color: var(--color-headers);
-}
-
-.typo_weight_400 {
-  font-weight: 400;
 }
 
 .typo_weight_300 {
@@ -147,15 +126,18 @@ a {
   padding-right: 6px;
   margin-left: 1px;
 }
+
 .tags__link-third {
   padding-right: 4px;
   padding-left: 5px;
 }
+
 .tags__link-fourth {
   padding-right: 3px;
 }
 
 .tags__link:hover {
+  cursor: pointer;
   background-color: #c5c5c5;
   transition: 0.3s ease-out;
 }
@@ -165,7 +147,7 @@ a {
   border-color: #c5c5c5;
 }
 
-.portfolio__works {
+.works {
   padding: 0;
   margin: 0;
   height: 602px;
@@ -178,34 +160,8 @@ a {
   list-style-type: none;
 }
 
-.portfolio__works-work {
+.works__work {
   padding-bottom: 18px;
-}
-
-.team { /*FIXME the same as card*/
-  padding-top: 24px;
-  display: flex;
-
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
-.team__member{
-  padding-bottom: 34px;
-  display: flex;
-  width: 32%;
-  overflow: hidden;
-  flex-direction: column;
-
-  line-height: 2.1rem;
-  letter-spacing: -0.1px;
-}
-
-.cards__card-text {
-  margin: 10px 0 13px 1px;
-
-  text-align: justify;
-  line-height: 2.1rem;
 }
 
 .about-us { /*FIXME the same as .services*/
@@ -229,10 +185,30 @@ a {
   text-align: justify;
 }
 
+.team { /*FIXME the same as cards*/
+  padding-top: 24px;
+  display: inline-flex;
+
+  justify-content: space-between;
+}
+
+.team__member {
+  padding-bottom: 34px;
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+
+  line-height: 2.1rem;
+  letter-spacing: -0.1px;
+}
+
 .team__member-name {
   padding-top: 17px;
   padding-bottom: 10px;
   margin-left: -1px;
+  white-space: nowrap;
+
+  overflow: hidden;
 }
 
 .team__member-description {
