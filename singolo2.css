@@ -235,6 +235,6 @@ a {
 }
 
 .social__link:hover {
-  filter: saturate(10);
+  filter: brightness(180%);
   transition: 0.3s ease-out;
 }
