@@ -98,7 +98,7 @@ a {
 }
 
 .request__content {
-  padding: 62px 40px 19px 40px;
+  padding: 62px 40px 17px 40px;
 }
 
 .request__header {
@@ -174,14 +174,20 @@ a {
 }
 
 .quote__submit {
-  height: 3.3rem;
-  width: 8rem;
+  height: 3.5rem;
+  width: 10rem;
 
   color: var(--color-quote);
 }
 
 .quote__input::placeholder,
-.quote__textarea::placeholder { /* Most modern browsers support this now. */
+.quote__textarea::placeholder {
+  color: var(--color-form);
+}
+
+/*Edge support*/
+.quote__input::-ms-input-placeholder,
+.quote__textarea::-ms-input-placeholder {
   color: var(--color-form);
 }
 
