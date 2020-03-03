@@ -4,7 +4,8 @@
   --color-main: #767e9e;
   --color-form: #f48c8f;
   --color-quote: #f0d8d9;
-  --color-placeholder: #d6564f;
+  --transition: .3s ease-out;
+  --brightness: brightness(180%);
 }
 
 /*global*/
@@ -30,14 +31,6 @@ a {
 
 .top_padding_fix_1px {
   padding-top: 1px;
-}
-
-.left_padding_fix_2px {
-  padding-left: 2px;
-}
-
-.top_margin_fix_1px {
-  margin-top: 1px;
 }
 
 /*Typo*/
@@ -127,18 +120,20 @@ a {
 }
 
 .social__link:hover {
-  filter: brightness(180%);
-  transition: 0.3s ease-out;
+  filter: var(--brightness);
+  transition: var(--transition);
 }
 
 .request__container {
   display: inline-flex;
+
   justify-content: space-between;
 }
 
 .quote {
   padding-right: 20px;
   display: flex;
+
   flex-direction: column;
   flex-basis: 65.9%;
   flex-shrink: 0;
@@ -149,14 +144,14 @@ a {
 .quote__submit {
   box-sizing: border-box;
 
-  background-color: var(--color-placeholder);
+  background-color: #d6564f;
   border: none;
   border-radius: 5px;
   outline: none;
 
   color: #ffffff;
 
-  transition: background-color .3s ease-out, box-shadow .3s ease-out;
+  transition: background-color var(--transition), box-shadow var(--transition);
 }
 
 .quote__input {
@@ -193,8 +188,11 @@ a {
 
 .quote__input:hover,
 .quote__textarea:hover,
-.quote__submit:hover {
-  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+.quote__submit:hover,
+.quote__input:focus,
+.quote__textarea:focus,
+.quote__submit:focus {
+  box-shadow: 0 0 7px 1px rgba(0, 0, 0, .3);
 }
 
 .quote__submit:hover {
@@ -250,6 +248,7 @@ a {
   position: absolute;
   left: 0;
   top: 0;
+
   background-position: center center;
   background-repeat: no-repeat;
 }
@@ -257,14 +256,14 @@ a {
 .contacts__contact-link:hover {
   line-height: 1.5;
   color: #ffffff;
-  transition: 0.3s ease-out;
+  transition: var(--transition);
 }
 
-.contacts__contact-link:hover > .contacts__contact-location,
-.contacts__contact-link:hover > .contacts__contact-tel,
-.contacts__contact-link:hover > .contacts__contact-tel {
-  filter: brightness(180%);
-  transition: 0.3s ease-out;
+.contacts__contact-link:hover > .contacts__contact-location:before,
+.contacts__contact-link:hover > .contacts__contact-tel:before,
+.contacts__contact-link:hover > .contacts__contact-email:before {
+  filter: var(--brightness);
+  transition: var(--transition);
 }
 
 .contacts__contact-location,
@@ -274,7 +273,7 @@ a {
   position: relative;
 
   line-height: 1.7;
-  letter-spacing: 0.02px;
+  letter-spacing: .02px;
 }
 
 .footer {
