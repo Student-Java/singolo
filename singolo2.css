@@ -2,6 +2,7 @@
   --color-active: #f06c64;
   --color-headers: #666d89;
   --color-main: #767e9e;
+  --transition: .3s ease-out;
 }
 
 /*global*/
@@ -142,7 +143,7 @@ a {
 .tags__link:hover {
   cursor: pointer;
   background-color: #c5c5c5;
-  transition: 0.3s ease-out;
+  transition: var(--transition);
 }
 
 .tags__link-active {
@@ -239,5 +240,5 @@ a {
 
 .social__link:hover {
   filter: brightness(180%);
-  transition: 0.3s ease-out;
+  transition: var(--transition);
 }
