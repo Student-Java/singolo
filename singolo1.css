@@ -1,6 +1,7 @@
 /*global*/
 :root {
   --color-active: #f06c64;
+  --transition: .3s ease-out;
 }
 
 html {
@@ -165,7 +166,7 @@ a {
 .navigation__link:hover {
   color: var(--color-active);
 
-  transition: 0.3s ease-out;
+  transition: var(--transition);
 }
 
 .logo {
@@ -200,7 +201,7 @@ a {
 .slider__navigation-image-left:hover,
 .slider__navigation-image-right:hover {
   filter: brightness(80%);
-  transition: 0.3s ease-out;
+  transition: var(--transition);
 }
 
 .slider__vertical-frame {
