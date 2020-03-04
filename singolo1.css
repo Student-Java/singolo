@@ -183,7 +183,7 @@ a {
 
 .slider__navigation-image-left {
   margin-top: 1px;
-  background: url('assets/slider_left.png') no-repeat top left;
+  background: url('assets/img/slider_left.png') no-repeat top left;
   display: inline-block;
   height: 27px;
   width: 16px;
@@ -191,7 +191,7 @@ a {
 
 .slider__navigation-image-right {
   margin-top: 1px;
-  background: url('assets/slider_right.png') no-repeat top left;
+  background: url('assets/img/slider_right.png') no-repeat top left;
   display: inline-block;
   height: 27px;
   width: 16px;
@@ -206,7 +206,7 @@ a {
 .slider__vertical-frame {
   padding-left: 19px;
   position: relative;
-  background: url('assets/iphone_vert.png') no-repeat top left;
+  background: url('assets/img/iphone_vert.png') no-repeat top left;
   display: inline-block;
   height: 483px;
   width: 240px;
@@ -216,7 +216,7 @@ a {
   padding-right: 2px;
   padding-bottom: 1px;
   position: relative;
-  background: url('assets/iphone_hor.png') no-repeat top left;
+  background: url('assets/img/iphone_hor.png') no-repeat top left;
   display: inline-block;
   height: 240px;
   width: 483px;

@@ -226,15 +226,15 @@ a {
 }
 
 .contacts__contact-location:before {
-  background-image: url(assets/location.png);
+  background-image: url(assets/img/location.png);
 }
 
 .contacts__contact-tel:before {
-  background-image: url(assets/tel.png);
+  background-image: url(assets/img/tel.png);
 }
 
 .contacts__contact-email:before {
-  background-image: url(assets/email.png);
+  background-image: url(assets/img/email.png);
 }
 
 .contacts__contact-location:before,
