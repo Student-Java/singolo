@@ -83,7 +83,6 @@ a {
   box-sizing: border-box;
   max-width: 1020px;
   margin: 0 auto;
-  padding: 0;
 }
 
 .portfolio {
@@ -191,14 +190,16 @@ a {
 
 .team { /*FIXME the same as cards*/
   padding-top: 24px;
-  display: inline-flex;
-
+  display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  height: 100%;
 }
 
 .team__member {
   padding-bottom: 34px;
   width: 32%;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
 
