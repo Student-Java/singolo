@@ -258,6 +258,7 @@ a {
   padding-bottom: 19px;
   display: flex;
   width: 32%;
+  min-width: 300px;
 
   line-height: 2.1rem;
   letter-spacing: -0.1px;
