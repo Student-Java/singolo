@@ -49,10 +49,6 @@ a {
   padding-left: 2px;
 }
 
-.top_margin_fix_1px {
-  margin-top: 1px;
-}
-
 .top_padding_fix_1px {
   padding-top: 1px;
 }
@@ -68,11 +64,6 @@ a {
 /* typo */
 .typo_size_xxl {
   font-size: 3.0rem;
-  line-height: 1;
-}
-
-.typo_size_xl {
-  font-size: 2.5rem;
   line-height: 1;
 }
 
@@ -154,7 +145,7 @@ a {
 }
 
 .slider__content {
-  padding: 53px 40px 58px 42px;
+  padding: 53px 39px 56px 42px;
   display: flex;
 
   justify-content: space-between;
@@ -218,7 +209,6 @@ a {
 }
 
 .slider__navigation-image-left {
-  margin-top: 1px;
   background: url('assets/img/slider_left.png') no-repeat top left;
   display: inline-block;
   height: 27px;
@@ -226,7 +216,6 @@ a {
 }
 
 .slider__navigation-image-right {
-  margin-top: 1px;
   background: url('assets/img/slider_right.png') no-repeat top left;
   display: inline-block;
   height: 27px;
@@ -239,35 +228,59 @@ a {
   transition: var(--transition);
 }
 
+/*FIXME possibly wrong position property*/
 .slider__vertical-frame {
-  padding-left: 19px;
   position: relative;
-  background: url('assets/img/iphone_vert.png') no-repeat top left;
-  display: inline-block;
-  height: 483px;
-  width: 240px;
+  margin-right: 18px;
 }
 
+/*FIXME possibly wrong position property*/
 .slider__horizontal-frame {
-  padding-right: 2px;
-  padding-bottom: 1px;
   position: relative;
-  background: url('assets/img/iphone_hor.png') no-repeat top left;
-  display: inline-block;
-  height: 240px;
-  width: 483px;
 }
 
-.slider__vertical-frame-image {
-  position: absolute;
-  left: 14px;
-  top: 65px;
+.slider__phone-shadow-vert {
+  margin-left: -1px;
 }
 
-.slider__horizontal-frame-image {
+.slider__phone-base-vert {
   position: absolute;
-  left: 60px;
-  top: 14px;
+  left: -1px;
+  top: 0;
+
+  z-index: 1;
+}
+
+.slider__phone-screen-vert {
+  position: absolute;
+  left: -1px;
+  top: -70px;
+
+  z-index: 2;
+
+  clip: rect(135px, 202px, 468px, 14px);
+}
+
+.slider__phone-shadow-hor {
+  margin-top: -1px;
+}
+
+.slider__phone-base-hor {
+  position: absolute;
+  left: -1px;
+  top: -1px;
+
+  z-index: 1;
+}
+
+.slider__phone-screen-hor {
+  position: absolute;
+  left: -66px;
+  top: -106px;
+
+  z-index: 2;
+
+  clip: rect(119px, 458px, 307px, 125px);
 }
 
 .services__header {
@@ -391,6 +404,12 @@ a {
   padding-bottom: 18px;
 }
 
+.works__work:hover > img {
+  cursor: pointer;
+  transition: var(--transition);
+  filter: brightness(115%);
+}
+
 .about-us__content {
   padding: 62px 39px 26px 40px;
 }
@@ -506,7 +525,7 @@ a {
 
   color: var(--color-lightest);
 
-  transition: background-color var(--transition), box-shadow var(--transition);
+  transition: box-shadow var(--transition);
 }
 
 .quote__input {

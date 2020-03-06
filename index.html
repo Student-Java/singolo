@@ -40,14 +40,18 @@
 </header>
 <main>
   <section class="slider">
-    <h2 class="visually-hidden">Gallery</h2>
     <div class="content slider__content">
+      <h2 class="visually-hidden">Gallery</h2>
       <a href="#left"><span class="slider__navigation-image-left"></span></a>
       <div class="slider__vertical-frame">
-        <img class="slider__vertical-frame-image" src="assets/img/screen_vert.png" width="188" height="333" alt="iPhone vertical">
+        <img class="slider__phone-shadow-vert" src="assets/img/iphone_shadow.png" height="483" width="240" alt="iPhone shadow">
+        <img class="slider__phone-base-vert" src="assets/img/iphone_base.png" height="458" width="215" alt="iPhone base">
+        <img class="slider__phone-screen-vert" src="assets/img/iphone_screen_image_vert.png" height="580" width="580" alt="iPhone screen image">
       </div>
       <div class="slider__horizontal-frame">
-        <img class="slider__horizontal-frame-image" src="assets/img/screen_hor.png" width="333" height="188" alt="iPhone horizontal">
+        <img class="slider__phone-shadow-hor" src="assets/img/iphone_shadow_hor.png" height="240" width="483" alt="iPhone shadow">
+        <img class="slider__phone-base-hor" src="assets/img/iphone_base_hor.png" height="215" width="458" alt="iPhone base">
+        <img class="slider__phone-screen-hor" src="assets/img/iphone_screen_image_hor.png" height="580" width="580" alt="iPhone screen image">
       </div>
       <a href="#right"><span class="slider__navigation-image-right"></span></a>
     </div>
@@ -135,9 +139,9 @@
         <li class="works__work"><img src="assets/img/work_10.jpg" height="187" width="220" alt="work"></li>
         <li class="works__work"><img src="assets/img/work_11.jpg" height="187" width="220" alt="work"></li>
         <li class="works__work"><img src="assets/img/work_12.jpg" height="187" width="220" alt="work"></li>
-        <li class="works__work"><img src="assets/img/work_1.jpg" height="187" width="220" alt="work"></li>
-        <li class="works__work"><img src="assets/img/work_1.jpg" height="187" width="220" alt="work"></li>
-        <li class="works__work"><img src="assets/img/work_1.jpg" height="187" width="220" alt="work"></li>
+        <li class="works__work"><img src="assets/img/work_12.jpg" height="187" width="220" alt="work"></li>
+        <li class="works__work"><img src="assets/img/work_12.jpg" height="187" width="220" alt="work"></li>
+        <li class="works__work"><img src="assets/img/work_12.jpg" height="187" width="220" alt="work"></li>
       </ul>
     </div>
   </section>
@@ -194,6 +198,7 @@
         condimentum nibh.</p>
       <div class="contact-us__container">
         <form class="quote typo_size_sm typo_weight_400 typo_color_form" action="#" method="post" id="quote">
+          <!--TODO add hidden labels for accessibility reasons-->
           <input class="quote__input" type="text" name="name" placeholder="Name (Required)" required>
           <input class="quote__input" type="email" name="email" placeholder="Email (Required)" required>
           <input class="quote__input" type="text" name="subject" placeholder="Subject">
