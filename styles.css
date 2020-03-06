@@ -599,8 +599,7 @@ a {
 }
 
 .contact-info__text {
-  margin: 0;
-  padding-bottom: 25px;
+  margin: 1px 0 24px 0;
   line-height: 2.1rem;
 
   letter-spacing: -0.04px;
