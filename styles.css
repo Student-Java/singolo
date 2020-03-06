@@ -563,6 +563,7 @@ a {
 .quote__input::placeholder,
 .quote__textarea::placeholder {
   color: var(--color-form);
+  opacity: 1; /*FF compatibility*/
 }
 
 /*Edge support*/
