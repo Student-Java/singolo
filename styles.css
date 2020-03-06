@@ -228,13 +228,11 @@ a {
   transition: var(--transition);
 }
 
-/*FIXME possibly wrong position property*/
 .slider__vertical-frame {
   position: relative;
   margin-right: 18px;
 }
 
-/*FIXME possibly wrong position property*/
 .slider__horizontal-frame {
   position: relative;
 }
@@ -532,6 +530,19 @@ a {
   margin-bottom: 16px;
   padding: 18px 15px 20px 15px;
   height: 3rem;
+}
+
+.quote__input:required:invalid:focus {
+  background-image: url("assets/img/invalid.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  -moz-box-shadow: none;
+}
+
+.quote__input:required:valid:focus {
+  background-image: url("assets/img/valid.png");
+  background-position: right center;
+  background-repeat: no-repeat;
 }
 
 .quote__textarea {
