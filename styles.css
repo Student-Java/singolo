@@ -600,8 +600,8 @@ a {
 
 .contact-info__text {
   margin: 0;
-  padding-bottom: 21px;
-  line-height: 1.9;
+  padding-bottom: 25px;
+  line-height: 2.1rem;
 
   letter-spacing: -0.04px;
   text-align: justify;
