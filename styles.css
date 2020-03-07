@@ -302,10 +302,15 @@ a {
 }
 
 .cards__card {
+  box-sizing: border-box;
   padding-bottom: 19px;
+  padding-left: 80px;
   display: flex;
+  flex-direction: column;
   width: 32%;
   min-width: 300px;
+  position: relative;
+  overflow: hidden;
 
   line-height: 2.1rem;
   letter-spacing: -0.1px;
@@ -314,12 +319,14 @@ a {
 .cards__card-image {
   padding-top: 1px;
   padding-right: 18px;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .cards__card-text {
   margin: 10px 0 13px 1px;
   height: 6.3rem;
-  overflow: hidden;
 
   line-height: 2.1rem;
   text-align: justify;
@@ -410,6 +417,13 @@ a {
 
 .about-us__content {
   padding: 62px 39px 26px 40px;
+}
+
+/* FF fix*/
+@-moz-document url-prefix() {
+  .about-us__content {
+    padding-bottom: 27px;
+  }
 }
 
 .about-us__header {
