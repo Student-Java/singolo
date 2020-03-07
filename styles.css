@@ -53,14 +53,6 @@ a {
   padding-top: 1px;
 }
 
-.letter_spacing_0 {
-  letter-spacing: 0;
-}
-
-.letter_spacing_-05 {
-  letter-spacing: -0.05px;
-}
-
 /* typo */
 .typo_size_xxl {
   font-size: 3.0rem;
@@ -546,19 +538,6 @@ a {
   height: 3rem;
 }
 
-.quote__input:required:invalid:focus {
-  background-image: url("assets/img/invalid.png");
-  background-position: right center;
-  background-repeat: no-repeat;
-  -moz-box-shadow: none;
-}
-
-.quote__input:required:valid:focus {
-  background-image: url("assets/img/valid.png");
-  background-position: right center;
-  background-repeat: no-repeat;
-}
-
 .quote__textarea {
   margin-bottom: 15px;
   padding: 11px 15px;
@@ -593,6 +572,19 @@ a {
 .quote__textarea:focus,
 .quote__submit:focus {
   box-shadow: 0 0 7px 1px rgba(0, 0, 0, .3);
+}
+
+.quote__input:required:invalid:focus {
+  background-image: url("assets/img/invalid.png");
+  background-position: right center;
+  background-repeat: no-repeat;
+  -moz-box-shadow: none;
+}
+
+.quote__input:required:valid:focus {
+  background-image: url("assets/img/valid.png");
+  background-position: right center;
+  background-repeat: no-repeat;
 }
 
 .quote__submit:hover {
@@ -672,7 +664,6 @@ a {
   position: relative;
 
   line-height: 1.7;
-  letter-spacing: .02px;
 }
 
 .footer {
