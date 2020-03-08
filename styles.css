@@ -320,6 +320,8 @@ a {
   margin: 10px 0 13px 1px;
   height: 6.3rem;
 
+  overflow: hidden;
+
   line-height: 2.1rem;
   text-align: justify;
 }
