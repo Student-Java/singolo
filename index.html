@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
         integrity="sha256-WAgYcAck1C1/zEl5sBl5cfyhxtLgKGdpI3oKyJffVRI=" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 <header class="header">
@@ -18,21 +18,21 @@
       <h1 class="logo">singolo</h1>
     </a>
     <nav>
-      <ul class="navigation typo_size_sm typo_weight_700">
+      <ul class="navigation typo_size_sm typo_weight_700" id="nav-links">
         <li class="navigation__item">
-          <a class="navigation__link typo_color_active" href="#">home</a>
+          <a class="navigation__item-link" href="#">home</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link typo_color_light" href="#services">services</a>
+          <a class="navigation__item-link" href="#services">services</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link typo_color_light" href="#portfolio">portfolio</a>
+          <a class="navigation__item-link" href="#portfolio">portfolio</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link typo_color_light" href="#about-us">about</a>
+          <a class="navigation__item-link" href="#about-us">about</a>
         </li>
         <li class="navigation__item">
-          <a class="navigation__link typo_color_light" href="#contact-us">contact</a>
+          <a class="navigation__item-link" href="#contact-us">contact</a>
         </li>
       </ul>
     </nav>
@@ -42,18 +42,39 @@
   <section class="slider">
     <div class="content slider__content">
       <h2 class="visually-hidden">Gallery</h2>
-      <a href="#left"><span class="slider__navigation-image-left"></span></a>
-      <div class="slider__vertical-frame">
-        <img class="slider__phone-shadow-vert" src="assets/img/iphone_shadow.png" height="483" width="240" alt="iPhone shadow">
-        <img class="slider__phone-base-vert" src="assets/img/iphone_base.png" height="458" width="215" alt="iPhone base">
-        <img class="slider__phone-screen-vert" src="assets/img/iphone_screen_image_vert.png" height="580" width="580" alt="iPhone screen image">
+      <span class="slider__left"></span>
+      <div class="slider__slides">
+        <div class="slider__slides-1">
+          <div class="phone-vert">
+            <img class="phone-vert__shadow" src="assets/img/iphone_shadow.png" height="483" width="240" alt="iPhone shadow">
+            <img class="phone-vert__base" src="assets/img/iphone_base.png" height="458" width="215" alt="iPhone base">
+            <img class="phone-vert__screen" src="assets/img/iphone_screen_image_vert_.png" height="333" width="188" alt="iPhone screen image">
+          </div>
+          <div class="phone-hor">
+            <img class="phone-hor__shadow" src="assets/img/iphone_shadow_hor.png" height="240" width="483" alt="iPhone shadow">
+            <img class="phone-hor__base" src="assets/img/iphone_base_hor.png" height="215" width="458" alt="iPhone base">
+            <img class="phone-hor__screen" src="assets/img/iphone_screen_image_hor_.png" height="188" width="333" alt="iPhone screen image">
+          </div>
+        </div>
+        <div class="slider__slides-2">
+          <div class="phone-left">
+            <img src="assets/img/iphone_shadow.png" height="314" width="156" alt="iPhone shadow">
+            <img src="assets/img/iphone_base.png" height="298" width="140" alt="iPhone base">
+            <img src="assets/img/iphone_screen_image_vert_.png" height="216" width="122" alt="iPhone screen image">
+          </div>
+          <div class="phone-middle">
+            <img src="assets/img/iphone_shadow.png" height="513" width="255" alt="iPhone shadow">
+            <img src="assets/img/iphone_base.png" height="486" width="229" alt="iPhone base">
+            <img src="assets/img/iphone_screen_image_vert_slide2.png" height="354" width="201" alt="iPhone screen image">
+          </div>
+          <div class="phone-right">
+            <img src="assets/img/iphone_shadow.png" height="314" width="156" alt="iPhone shadow">
+            <img src="assets/img/iphone_base.png" height="298" width="140" alt="iPhone base">
+            <img src="assets/img/iphone_screen_image_vert_.png" height="216" width="122" alt="iPhone screen image">
+          </div>
+        </div>
       </div>
-      <div class="slider__horizontal-frame">
-        <img class="slider__phone-shadow-hor" src="assets/img/iphone_shadow_hor.png" height="240" width="483" alt="iPhone shadow">
-        <img class="slider__phone-base-hor" src="assets/img/iphone_base_hor.png" height="215" width="458" alt="iPhone base">
-        <img class="slider__phone-screen-hor" src="assets/img/iphone_screen_image_hor.png" height="580" width="580" alt="iPhone screen image">
-      </div>
-      <a href="#right"><span class="slider__navigation-image-right"></span></a>
+      <span class="slider__right"></span>
     </div>
   </section>
   <div id="services"></div>
@@ -240,5 +261,6 @@
     </ul>
   </div>
 </footer>
+<script src="script.js"></script>
 </body>
 </html>
