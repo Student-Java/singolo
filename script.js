@@ -103,3 +103,24 @@ const throttle = (callback, limit) => {
 
 Object.values(arrows).forEach(arrow => arrow.addEventListener('click', throttle(doSlideAnimation, 700)));
 
+/* tags */
+const shuffle = (arr) => {
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
+let refreshGallery = (evt) => {
+  getByClassNames('tags__link').forEach(link => link.classList.remove('tags__link-active'));
+  evt.target.classList.add('tags__link-active');
+
+  let parentNodes = getByClassNames('works__work');
+  let shuffledPictures = shuffle(parentNodes.map(el => el.childNodes[0]));
+  parentNodes.forEach((el, ind) => el.replaceChild(shuffledPictures[ind].cloneNode(), el.childNodes[0]));
+}
+
+getByClassNames('tags__link').forEach(el => el.addEventListener('click', refreshGallery))
+
+
