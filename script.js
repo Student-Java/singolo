@@ -16,6 +16,15 @@ changeLinkState();
 window.addEventListener('scroll', changeLinkState);
 
 
+/* Phone on/off */
+let turnOffPhone = (evt) => [...evt.target.parentElement.childNodes].filter(node => node.nodeType === 1)[2].classList.toggle('visually-hidden');
+
+let initPhonePowerEvents = () => [...document.getElementsByClassName('phone-vert__base phone-vert__screen phone-hor__base phone-hor__screen')]
+  .forEach(el => el.addEventListener('click', turnOffPhone));
+
+initPhonePowerEvents();
+
+
 /* Slider */
 const arrows = {
   left: document.getElementsByClassName('slider__left')[0],
