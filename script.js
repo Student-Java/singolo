@@ -136,3 +136,34 @@ const changeActiveWork = (e) => {
 
 const initGalleryPicturesEvents = () => getWorks().forEach(el => el.addEventListener('click', changeActiveWork));
 initGalleryPicturesEvents();
+
+
+/* Modal window */
+const modal = document.querySelector(".modal");
+const form = document.querySelector('.quote');
+
+const windowOnClick = (e) => {
+  if (e.target === modal) toggleModal()
+};
+
+const toggleModal = () => modal.classList.toggle("show-modal");
+
+const fillModal = () => {
+  let subject = document.getElementById('subject').value;
+  let description = document.getElementById('description').value;
+
+  document.getElementById('letter-subject').innerText = subject ? `Тема: ${subject}` : 'Без темы';
+  document.getElementById('letter-description').innerText = description ? `Описание: ${description}` : 'Без описания';
+};
+
+const onFormSubmit = (e) => {
+  e.preventDefault();
+  fillModal();
+  toggleModal();
+  form.reset();
+  return false;
+};
+
+form.addEventListener('submit', onFormSubmit);
+document.querySelector(".close-button").addEventListener("click", toggleModal);
+window.addEventListener("click", windowOnClick);
