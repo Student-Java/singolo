@@ -245,25 +245,22 @@ a {
   overflow: hidden;
 }
 
-.slider__slides-1,
-.slider__slides-2,
-.slider__slides-0 {
+.slide {
   min-width: 799px;
 
   position: relative;
   display: flex;
+
+  align-items: center;
 }
 
 .slider__slides-1 {
   justify-content: space-between;
-  padding-top: 28px;
 }
 
-.slider__slides-2,
-.slider__slides-0 {
-  padding-bottom: 18px;
+.slider__slides-2 {
   justify-content: center;
-  align-items: center;
+
 }
 
 .slider__left,
@@ -272,6 +269,7 @@ a {
   display: inline-block;
   height: 27px;
   width: 20px;
+  position: relative;
 }
 
 .slider__left {
@@ -282,10 +280,32 @@ a {
   background: url('img/slider_right.png') no-repeat top left;
 }
 
+.slider__left:after,
+.slider__right:after {
+  content: "";
+  display: block;
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  left: -13px;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 4em;
+  width: 4em;
+  opacity: 0;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
 .slider__left:hover,
 .slider__right:hover {
-  filter: brightness(80%);
   cursor: pointer;
+}
+
+.slider__left:hover:after,
+.slider__right:hover:after {
+  opacity: .5;
 }
 
 .phone-vert {
@@ -294,8 +314,7 @@ a {
 }
 
 .phone-hor {
-  padding-top: 121px;
-  padding-left: 2px;
+  padding-left: 56px;
   position: relative;
 }
 
@@ -319,45 +338,45 @@ a {
 .phone-left img:first-child {
   position: absolute;
   left: 140px;
-  top: -134px;
+  top: -145px;
 }
 
 .phone-left img:nth-child(2) {
   position: absolute;
   left: 140px;
-  top: -135px;
+  top: -143px;
 }
 
 .phone-left img:last-child {
   position: absolute;
   left: 149px;
-  top: -91px;
+  top: -100px;
 }
 
 .phone-right img:first-child {
   position: absolute;
   left: -67px;
-  top: -134px;
+  top: -145px;
 }
 
 .phone-right img:nth-child(2) {
   position: absolute;
   left: -67px;
-  top: -134px;
+  top: -143px;
   z-index: 1;
 }
 
 .phone-right img:last-child {
   position: absolute;
   left: -58px;
-  top: -91px;
+  top: -100px;
   z-index: 2;
 }
 
 .phone-middle img:first-child {
   position: absolute;
-  top: -244px;
   left: 82px;
+  top: -252px;
 
   z-index: 3;
 }
@@ -365,7 +384,7 @@ a {
 .phone-middle img:nth-child(2) {
   position: absolute;
   left: 82px;
-  top: -243px;
+  top: -252px;
 
   opacity: 0.85;
   z-index: 4;
@@ -374,7 +393,7 @@ a {
 .phone-middle img:last-child {
   position: absolute;
   left: 96px;
-  top: -174px;
+  top: -183px;
 
   z-index: 5;
 }
@@ -395,22 +414,17 @@ a {
   z-index: 2;
 }
 
-.phone-hor__shadow {
-  padding-right: 3px;
-}
-
 .phone-hor__base {
   position: absolute;
-  left: 2px;
-  top: 121px;
+  left: 55px;
 
   z-index: 1;
 }
 
 .phone-hor__screen {
   position: absolute;
-  left: 62px;
-  top: 135px;
+  left: 115px;
+  top: 14px;
 
   z-index: 2;
 }

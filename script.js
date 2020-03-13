@@ -2,7 +2,7 @@
 const navLinks = document.querySelectorAll('nav > ul > li > a');
 const sections = [...document.getElementsByClassName('slider'), ...document.querySelectorAll('main > div')];
 
-const changeLinkState = () => {
+const changeLinkState = (evt) => {
   let index = sections.length;
 
   while (--index && ((window.innerHeight - sections[index].getBoundingClientRect().y) / window.innerHeight) * 100 < 65) {
@@ -25,11 +25,17 @@ const arrows = {
 const animation = 'transition: .7s ease-out;';
 const colors = [{bg: '#f06c64', border: '#ea676b'}, {bg: '#648BF0', border: '#647df0'}];
 const sliderContainer = document.getElementsByClassName('slider')[0];
-const parent = document.getElementsByClassName('slider__slides')[0];
-const getSlides = () => [...parent.childNodes].filter(el => el.nodeType === 1);
+const getSlides = () => [...document.getElementsByClassName('slide')];
+
 // init carousel
-getSlides()[0].style = `opacity: 0; margin-left: -${getSlides()[0].offsetWidth}px`;
-getSlides()[2].style = `opacity: 0`;
+let initialSlides = getSlides();
+initialSlides.unshift(initialSlides[1].cloneNode(true));
+initialSlides[0].style = `opacity: 0; margin-left: -${initialSlides[2].offsetWidth}px`;
+initialSlides[2].style = `opacity: 0`;
+
+const parent = initialSlides[1].parentElement;
+parent.innerHTML = '';
+parent.append(...initialSlides);
 
 const doSlideAnimation = (evt) => {
   let slides = getSlides();
@@ -63,6 +69,10 @@ const doSlideAnimation = (evt) => {
     }
     parent.innerHTML = '';
     parent.append(...slides);
+    if (slideNumber) {
+      initPhonePowerEvents();
+    }
+
     clearInterval(timer);
   }, 700);
 };
