@@ -1,3 +1,6 @@
+const animation = 'transition: .7s ease-out;';
+const getByClassNames = (...classNames) => classNames.map(name => [...document.getElementsByClassName(name)]).flat();
+
 /* Active nav links */
 const navLinks = document.querySelectorAll('nav > ul > li > a');
 const sections = [...document.getElementsByClassName('slider'), ...document.querySelectorAll('main > div')];
@@ -19,7 +22,7 @@ window.addEventListener('scroll', changeLinkState);
 /* Phone on/off */
 let turnOffPhone = (evt) => [...evt.target.parentElement.childNodes].filter(node => node.nodeType === 1)[2].classList.toggle('visually-hidden');
 
-let initPhonePowerEvents = () => [...document.getElementsByClassName('phone-vert__base phone-vert__screen phone-hor__base phone-hor__screen')]
+let initPhonePowerEvents = () => getByClassNames('phone-vert__base', 'phone-vert__screen', 'phone-hor__base', 'phone-hor__screen')
   .forEach(el => el.addEventListener('click', turnOffPhone));
 
 initPhonePowerEvents();
@@ -27,14 +30,13 @@ initPhonePowerEvents();
 
 /* Slider */
 const arrows = {
-  left: document.getElementsByClassName('slider__left')[0],
-  right: document.getElementsByClassName('slider__right')[0]
+  left: getByClassNames('slider__left')[0],
+  right: getByClassNames('slider__right')[0]
 };
 
-const animation = 'transition: .7s ease-out;';
 const colors = [{bg: '#f06c64', border: '#ea676b'}, {bg: '#648BF0', border: '#647df0'}];
-const sliderContainer = document.getElementsByClassName('slider')[0];
-const getSlides = () => [...document.getElementsByClassName('slide')];
+const sliderContainer = getByClassNames('slider')[0];
+const getSlides = () => getByClassNames('slide');
 
 // init carousel
 let initialSlides = getSlides();
