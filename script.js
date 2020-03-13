@@ -5,7 +5,7 @@ const getByClassNames = (...classNames) => classNames.map(name => [...document.g
 const navLinks = document.querySelectorAll('nav > ul > li > a');
 const sections = [...document.getElementsByClassName('slider'), ...document.querySelectorAll('main > div')];
 
-const changeLinkState = (evt) => {
+const changeLinkState = (e) => {
   let index = sections.length;
 
   while (--index && ((window.innerHeight - sections[index].getBoundingClientRect().y) / window.innerHeight) * 100 < 65) {
@@ -20,7 +20,7 @@ window.addEventListener('scroll', changeLinkState);
 
 
 /* Phone on/off */
-let turnOffPhone = (evt) => [...evt.target.parentElement.childNodes].filter(node => node.nodeType === 1)[2].classList.toggle('visually-hidden');
+let turnOffPhone = (e) => [...e.target.parentElement.childNodes].filter(node => node.nodeType === 1)[2].classList.toggle('visually-hidden');
 
 let initPhonePowerEvents = () => getByClassNames('phone-vert__base', 'phone-vert__screen', 'phone-hor__base', 'phone-hor__screen')
   .forEach(el => el.addEventListener('click', turnOffPhone));
@@ -48,18 +48,18 @@ const parent = initialSlides[1].parentElement;
 parent.innerHTML = '';
 parent.append(...initialSlides);
 
-const doSlideAnimation = (evt) => {
+const doSlideAnimation = (e) => {
   let slides = getSlides();
   if (!slides || !slides.length) {
     return;
   }
 
-  let slideNumber = (evt.target === arrows.left ? slides[0] : slides[slides.length - 1]).id.replace(/^.+[^0-9]/, '') % 2;
+  let slideNumber = (e.target === arrows.left ? slides[0] : slides[slides.length - 1]).id.replace(/^.+[^0-9]/, '') % 2;
   sliderContainer.style = `${animation} border-bottom: 6px solid ${colors[slideNumber].bg}; background-color:  ${colors[slideNumber].border};`
 
   let animationStyle = `${animation}  opacity: 0;`;
 
-  if (evt.target === arrows.left) {
+  if (e.target === arrows.left) {
     slides[0].style = `${animation}  opacity: 1; margin-left: 0px`;
     slides[1].style = `${animation} opacity: 0`;
   } else {
@@ -69,7 +69,7 @@ const doSlideAnimation = (evt) => {
   Object.values(arrows).forEach(ar => ar.style = slideNumber ? `${animation} filter: hue-rotate(225deg);` : `${animation} filter: hue-rotate(0deg)`);
 
   let timer = setInterval(function () {
-    if (evt.target === arrows.left) {
+    if (e.target === arrows.left) {
       slides.pop();
       slides.unshift(slides[slides.length - 1].cloneNode(true));
       slides[0].style = `opacity: 0; margin-left: -${slides[slides.length - 1].offsetWidth}px`;
@@ -103,7 +103,7 @@ const throttle = (callback, limit) => {
 
 Object.values(arrows).forEach(arrow => arrow.addEventListener('click', throttle(doSlideAnimation, 700)));
 
-/* tags */
+/* Tags */
 const shuffle = (arr) => {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -112,15 +112,27 @@ const shuffle = (arr) => {
   return arr;
 }
 
-let refreshGallery = (evt) => {
+const getWorks = () => getByClassNames('works__work').map(el => el.childNodes[0]);
+
+let refreshGallery = (e) => {
   getByClassNames('tags__link').forEach(link => link.classList.remove('tags__link-active'));
-  evt.target.classList.add('tags__link-active');
+  e.target.classList.add('tags__link-active');
 
   let parentNodes = getByClassNames('works__work');
   let shuffledPictures = shuffle(parentNodes.map(el => el.childNodes[0]));
+  shuffledPictures.forEach(el => el.classList.remove('active-work'));
   parentNodes.forEach((el, ind) => el.replaceChild(shuffledPictures[ind].cloneNode(), el.childNodes[0]));
+  initGalleryPicturesEvents();
 }
 
 getByClassNames('tags__link').forEach(el => el.addEventListener('click', refreshGallery))
 
 
+/* Gallery pictures */
+const changeActiveWork = (e) => {
+  getWorks().forEach(el => el.classList.remove('active-work'));
+  e.target.classList.add('active-work');
+};
+
+const initGalleryPicturesEvents = () => getWorks().forEach(el => el.addEventListener('click', changeActiveWork));
+initGalleryPicturesEvents();
