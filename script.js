@@ -1,22 +1,40 @@
 const animation = 'transition: .7s ease-out;';
 const getByClassNames = (...classNames) => classNames.map(name => [...document.getElementsByClassName(name)]).flat();
 
+
 /* Active nav links */
-const navLinks = document.querySelectorAll('nav > ul > li > a');
+const navLinks = [...document.querySelectorAll('nav > ul > li > a')];
 const sections = [...document.getElementsByClassName('slider'), ...document.querySelectorAll('main > div')];
+const footer = document.querySelector('footer');
 
-const changeLinkState = (e) => {
-  let index = sections.length;
-
-  while (--index && ((window.innerHeight - sections[index].getBoundingClientRect().y) / window.innerHeight) * 100 < 65) {
+const changeLinkStateByScrolling = (e) => {
+  if (window.innerHeight > document.body.clientHeight / 2) {
+    return;
   }
 
+  let index = sections.length;
+  let footerRect = footer.getBoundingClientRect();
+
+  if (Math.ceil(window.innerHeight - footerRect.bottom) === 0 ) {
+    index = sections.length - 1;
+  } else {
+    while (--index && ((window.innerHeight - sections[index].getBoundingClientRect().y) / window.innerHeight) * 100 < 65) {}
+  }
+  changeLinkState(index);
+}
+
+const changeLinkStateByClick = (e) => {
+  changeLinkState(navLinks.indexOf(e.target));
+}
+
+const changeLinkState = (index) => {
   navLinks.forEach(link => link.classList.remove('active'));
   navLinks[index].classList.add('active');
 }
 
-changeLinkState();
-window.addEventListener('scroll', changeLinkState);
+changeLinkStateByScrolling();
+navLinks.forEach(link => link.addEventListener('click', changeLinkStateByClick));
+window.addEventListener('scroll', changeLinkStateByScrolling);
 
 
 /* Phone on/off */
@@ -24,7 +42,6 @@ let turnOffPhone = (e) => [...e.target.parentElement.childNodes].filter(node => 
 
 let initPhonePowerEvents = () => getByClassNames('phone-vert__base', 'phone-vert__screen', 'phone-hor__base', 'phone-hor__screen')
   .forEach(el => el.addEventListener('click', turnOffPhone));
-
 initPhonePowerEvents();
 
 
@@ -102,6 +119,7 @@ const throttle = (callback, limit) => {
 }
 
 Object.values(arrows).forEach(arrow => arrow.addEventListener('click', throttle(doSlideAnimation, 700)));
+
 
 /* Tags */
 const shuffle = (arr) => {
