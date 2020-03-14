@@ -140,16 +140,22 @@ let refreshGallery = (e) => {
   let shuffledPictures = shuffle(parentNodes.map(el => el.childNodes[0]));
   shuffledPictures.forEach(el => el.classList.remove('active-work'));
   parentNodes.forEach((el, ind) => el.replaceChild(shuffledPictures[ind].cloneNode(), el.childNodes[0]));
+  initTagEvents();
   initGalleryPicturesEvents();
 }
 
-getByClassNames('tags__link').forEach(el => el.addEventListener('click', refreshGallery))
+let initTagEvents = () => getByClassNames('tags__link')
+  .forEach(el => !el.classList.contains('tags__link-active')
+    ? el.addEventListener('click', refreshGallery)
+    : el.removeEventListener('click', refreshGallery));
+initTagEvents();
 
 
 /* Gallery pictures */
 const changeActiveWork = (e) => {
   getWorks().forEach(el => el.classList.remove('active-work'));
   e.target.classList.add('active-work');
+  initGalleryPicturesEvents();
 };
 
 const initGalleryPicturesEvents = () => getWorks().forEach(el => el.addEventListener('click', changeActiveWork));
