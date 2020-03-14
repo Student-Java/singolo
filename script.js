@@ -32,7 +32,6 @@ const changeLinkState = (index) => {
   navLinks[index].classList.add('active');
 }
 
-changeLinkStateByScrolling();
 navLinks.forEach(link => link.addEventListener('click', changeLinkStateByClick));
 window.addEventListener('scroll', changeLinkStateByScrolling);
 
@@ -40,8 +39,11 @@ window.addEventListener('scroll', changeLinkStateByScrolling);
 /* Phone on/off */
 let turnOffPhone = (e) => [...e.target.parentElement.childNodes].filter(node => node.nodeType === 1)[2].classList.toggle('visually-hidden');
 
-let initPhonePowerEvents = () => getByClassNames('phone-vert__base', 'phone-vert__screen', 'phone-hor__base', 'phone-hor__screen')
-  .forEach(el => el.addEventListener('click', turnOffPhone));
+let initPhonePowerEvents = () => {
+  [...getByClassNames('phone-vert__base', 'phone-vert__screen', 'phone-hor__base', 'phone-hor__screen'),
+    ...[...(document.querySelectorAll('div.phone-middle > img'))].slice(1)]
+    .forEach(el => el.addEventListener('click', turnOffPhone));
+}
 initPhonePowerEvents();
 
 
