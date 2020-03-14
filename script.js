@@ -176,8 +176,8 @@ const fillModal = () => {
   let subject = document.getElementById('subject').value;
   let description = document.getElementById('description').value;
 
-  document.getElementById('letter-subject').innerText = subject ? `Тема: ${subject}` : 'Без темы';
-  document.getElementById('letter-description').innerText = description ? `Описание: ${description}` : 'Без описания';
+  document.getElementById('letter-subject').innerHTML = subject ? `<b>Тема:</b> ${subject}` : 'Без темы';
+  document.getElementById('letter-description').innerHTML = description ? `<b>Описание:</b> ${description}` : 'Без описания';
 };
 
 const onFormSubmit = (e) => {

@@ -518,19 +518,6 @@ a {
   border-radius: 5px;
 }
 
-.tags__link-first {
-  padding-left: 7px;
-  margin-left: 1px;
-}
-
-.tags__link-third {
-  padding-right: 5px;
-}
-
-.tags__link-fourth {
-  padding-right: 5px;
-}
-
 .tags__link:hover {
   cursor: pointer;
   background-color: #c5c5c5;
@@ -540,6 +527,10 @@ a {
 .tags__link-active {
   color: #dedede;
   border-color: #c5c5c5;
+}
+
+.tags__link-active:hover {
+  cursor: default;
 }
 
 .works {
@@ -567,6 +558,10 @@ a {
 
 .active-work {
   outline: 5px solid #F06C64
+}
+
+.works__work:hover > img {
+  cursor: default;
 }
 
 .about-us__content {
@@ -857,6 +852,7 @@ a {
   visibility: hidden;
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 1000;
 }
 
 .letter-header {
