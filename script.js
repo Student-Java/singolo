@@ -3,7 +3,7 @@ const getByClassNames = (...classNames) => classNames.map(name => [...document.g
 
 
 /* Active nav links */
-const navLinks = [...document.querySelectorAll('nav > ul > li > a')];
+const navLinks = getByClassNames('navigation__item-link');
 const sections = [...document.getElementsByClassName('slider'), ...document.querySelectorAll('main > div')];
 const footer = document.querySelector('footer');
 
