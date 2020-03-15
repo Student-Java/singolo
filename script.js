@@ -157,7 +157,6 @@ initTagEvents();
 const changeActiveWork = (e) => {
   getWorks().forEach(el => el.classList.remove('active-work'));
   e.target.classList.add('active-work');
-  initGalleryPicturesEvents();
 };
 
 const initGalleryPicturesEvents = () => getWorks().forEach(el => el.addEventListener('click', changeActiveWork));
