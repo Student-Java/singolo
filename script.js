@@ -142,7 +142,6 @@ let refreshGallery = (e) => {
   shuffledNodes.forEach(el => el.childNodes[0].classList.remove('active-work'));
   shuffledNodes[0].parentElement.append(...shuffledNodes);
   initTagEvents();
-  initGalleryPicturesEvents();
 }
 
 let initTagEvents = () => getByClassNames('tags__link')
