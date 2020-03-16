@@ -138,10 +138,9 @@ let refreshGallery = (e) => {
   getByClassNames('tags__link').forEach(link => link.classList.remove('tags__link-active'));
   e.target.classList.add('tags__link-active');
 
-  let parentNodes = getByClassNames('works__work');
-  let shuffledPictures = shuffle(parentNodes.map(el => el.childNodes[0]));
-  shuffledPictures.forEach(el => el.classList.remove('active-work'));
-  parentNodes.forEach((el, ind) => el.replaceChild(shuffledPictures[ind].cloneNode(), el.childNodes[0]));
+  let shuffledNodes = shuffle(getByClassNames('works__work'));
+  shuffledNodes.forEach(el => el.childNodes[0].classList.remove('active-work'));
+  shuffledNodes[0].parentElement.append(...shuffledNodes);
   initTagEvents();
   initGalleryPicturesEvents();
 }
