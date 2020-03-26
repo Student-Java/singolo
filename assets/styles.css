@@ -152,10 +152,6 @@ a {
   margin-top: 95px;
   border-bottom: 6px solid #ea676b;
   background-color: var(--color-active);
-  /*
-  border-bottom: 6px solid #647df0;
-  background-color: #648BF0;
-  */
 }
 
 .contact-us {
@@ -248,7 +244,6 @@ a {
 
   position: relative;
   display: flex;
-
   align-items: center;
 }
 
@@ -258,7 +253,6 @@ a {
 
 .slider__slides-2 {
   justify-content: center;
-
 }
 
 .slider__left,
