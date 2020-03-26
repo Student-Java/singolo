@@ -32,9 +32,9 @@ const changeLinkState = (index) => {
   navLinks[index].classList.add('active');
 }
 
+changeLinkStateByScrolling();
 navLinks.forEach(link => link.addEventListener('click', changeLinkStateByClick));
 window.addEventListener('scroll', changeLinkStateByScrolling);
-
 
 /* Phone on/off */
 let turnOffPhone = (e) => [...e.target.parentElement.childNodes].filter(node => node.nodeType === 1)[2].classList.toggle('visually-hidden');
