@@ -192,7 +192,6 @@ a {
 .navigation__item {
   margin-left: 31px;
   position: relative;
-  letter-spacing: -0.33px;
 
   text-transform: uppercase;
 }
@@ -225,7 +224,6 @@ a {
 .logo {
   font-size: 2.5rem;
   font-weight: 700;
-  letter-spacing: -0.5px;
   line-height: 1;
   color: var(--color-lightest);
   text-transform: uppercase;
@@ -430,7 +428,6 @@ a {
 }
 
 .services__header {
-  letter-spacing: -0.14px;
 }
 
 .services__text {
@@ -461,7 +458,6 @@ a {
   overflow: hidden;
 
   line-height: 2.1rem;
-  letter-spacing: -0.1px;
 }
 
 .cards__card-image {
@@ -487,7 +483,6 @@ a {
 }
 
 .portfolio__header {
-  letter-spacing: -0.14px;
 }
 
 .portfolio__text {
@@ -576,7 +571,6 @@ a {
 }
 
 .about-us__header {
-  letter-spacing: -0.14px;
 }
 
 .about-us__text {
@@ -603,7 +597,6 @@ a {
   flex-direction: column;
 
   line-height: 2.1rem;
-  letter-spacing: -0.1px;
 }
 
 .team__member-name {
@@ -648,7 +641,6 @@ a {
 }
 
 .contact-us__header {
-  letter-spacing: -0.14px;
 }
 
 .contact-us__text {
@@ -759,14 +751,12 @@ a {
   padding-left: 1px;
   padding-bottom: 10px;
 
-  letter-spacing: -0.15px;
 }
 
 .contact-info__text {
   margin: 1px 0 24px 0;
   line-height: 2.1rem;
 
-  letter-spacing: -0.04px;
   text-align: justify;
 }
 
@@ -838,7 +828,6 @@ a {
 .footer__copyright {
   margin-top: -3px;
 
-  letter-spacing: -0.1px;
 }
 
 .modal {
