@@ -178,6 +178,12 @@ a {
   padding: 62px 40px 30px 40px;
 }
 
+@media only screen and (max-width: 1019px) {
+  .services__content {
+    padding: 42px 75px 19px 40px;
+  }
+}
+
 .navigation {
   margin: 0;
   padding-top: 12px;
@@ -276,6 +282,12 @@ a {
   position: relative;
   display: flex;
   align-items: center;
+}
+
+@media only screen and (max-width: 1019px) {
+  .slide {
+    margin-top: 5px;
+  }
 }
 
 .slider__slides-1 {
@@ -492,6 +504,12 @@ a {
   justify-content: space-between;
 }
 
+@media only screen and (max-width: 1019px) {
+  .cards {
+    padding-top: 16px;
+  }
+}
+
 .cards__card {
   box-sizing: border-box;
   padding-bottom: 19px;
@@ -504,6 +522,12 @@ a {
   overflow: hidden;
 
   line-height: 2.1rem;
+}
+
+@media only screen and (max-width: 1019px) {
+  .cards__card {
+    padding-bottom: 39px;
+  }
 }
 
 .cards__card-image {
@@ -528,6 +552,12 @@ a {
   padding: 62px 30px 60px 30px;
 }
 
+@media only screen and (max-width: 1019px) {
+  .portfolio__content {
+    padding-bottom: 54px;
+  }
+}
+
 .portfolio__header {
   margin-left: 10px;
   margin-right: 10px;
@@ -538,6 +568,12 @@ a {
 
   line-height: 3.0rem;
   text-align: justify;
+}
+
+@media only screen and (max-width: 1019px) {
+  .portfolio__text {
+    margin-bottom: 42px;
+  }
 }
 
 .tags {
@@ -576,23 +612,39 @@ a {
 }
 
 .works {
-  padding: 5px 0;
+  padding: 5px 10px;
   margin: 0;
   height: 603px;
 
   display: flex;
   flex-wrap: wrap;
-  /*justify-content: space-between;*/
+  justify-content: space-between;
   overflow: hidden;
 
   list-style-type: none;
 }
 
 .works__work {
-  /*padding-bottom: 18px;*/
-  margin: 0px 10px 18px;
+  margin: 0 0 18px;
 }
 
+.works__work > img {
+  width: 100%;
+}
+
+@media only screen and (max-width: 1019px) {
+  .works {
+    height: 808px;
+    padding: 13px 2px 0;
+  }
+
+  .works__work {
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 16px;
+    flex: 1 0 25%;
+  }
+}
 .works__work:hover > img {
   cursor: pointer;
   transition: var(--transition);
@@ -640,11 +692,14 @@ a {
 .team__member {
   padding-bottom: 34px;
   width: 32%;
-  min-width: 300px;
   display: flex;
   flex-direction: column;
 
   line-height: 2.1rem;
+}
+
+.team__member > img {
+  width: 100%;
 }
 
 .team__member-name {
@@ -661,6 +716,8 @@ a {
 .team__member-description {
   margin: 0 0 0 -2px;
   padding: 0 0 24px 2px;
+
+  flex-grow: 1;
 
   text-align: justify;
   line-height: 2.1rem;
