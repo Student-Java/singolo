@@ -40,8 +40,7 @@ window.addEventListener('scroll', changeLinkStateByScrolling);
 let turnOffPhone = (e) => [...e.target.parentElement.childNodes].filter(node => node.nodeType === 1)[2].classList.toggle('visually-hidden');
 
 let initPhonePowerEvents = () => {
-  [...getByClassNames('phone-vert__base', 'phone-vert__screen', 'phone-hor__base', 'phone-hor__screen'),
-    ...[...(document.querySelectorAll('div.phone-middle > img'))].slice(1)]
+  [...getByClassNames('phone-vert__base', 'phone-vert__screen', 'phone-hor__base', 'phone-hor__screen')]
     .forEach(el => el.addEventListener('click', turnOffPhone));
 }
 initPhonePowerEvents();
@@ -60,7 +59,7 @@ const getSlides = () => getByClassNames('slide');
 // init carousel
 let initialSlides = getSlides();
 initialSlides.unshift(initialSlides[1].cloneNode(true));
-initialSlides[0].style = `opacity: 0; margin-left: -${initialSlides[2].offsetWidth}px`;
+initialSlides[0].style = `opacity: 0; margin-left: -100%`;
 initialSlides[2].style = `opacity: 0`;
 
 const parent = initialSlides[1].parentElement;
@@ -82,7 +81,7 @@ const doSlideAnimation = (e) => {
     slides[0].style = `${animation}  opacity: 1; margin-left: 0px`;
     slides[1].style = `${animation} opacity: 0`;
   } else {
-    slides[1].style = `${animationStyle} opacity: 0; margin-left: -${slides[1].offsetWidth}px;`;
+    slides[1].style = `${animationStyle} opacity: 0; margin-left: -100%;`;
     slides[2].style = `${animation} opacity: 1`;
   }
   Object.values(arrows).forEach(ar => ar.style = slideNumber ? `${animation} filter: hue-rotate(225deg);` : `${animation} filter: hue-rotate(0deg)`);
@@ -91,7 +90,7 @@ const doSlideAnimation = (e) => {
     if (e.target === arrows.left) {
       slides.pop();
       slides.unshift(slides[slides.length - 1].cloneNode(true));
-      slides[0].style = `opacity: 0; margin-left: -${slides[slides.length - 1].offsetWidth}px`;
+      slides[0].style = `opacity: 0; margin-left: -100%`;
     } else {
       slides.shift();
       slides.push(slides[0].cloneNode(true));
