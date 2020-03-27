@@ -634,7 +634,7 @@ a {
 
 @media only screen and (max-width: 1019px) {
   .works {
-    height: 808px;
+    height: calc(100vw * 1073 / 1019);
     padding: 13px 2px 0;
   }
 
@@ -645,6 +645,7 @@ a {
     flex: 1 0 25%;
   }
 }
+
 .works__work:hover > img {
   cursor: pointer;
   transition: var(--transition);
@@ -661,6 +662,13 @@ a {
 
 .about-us__content {
   padding: 62px 39px 26px 40px;
+}
+
+@media only screen and (max-width: 1019px) {
+  .about-us__content {
+    padding-top: 55px;
+    padding-bottom: 28px;
+  }
 }
 
 /* FF fix*/
@@ -689,6 +697,12 @@ a {
   height: 100%;
 }
 
+@media only screen and (max-width: 1019px) {
+  .team {
+    padding-top: 17px;
+  }
+}
+
 .team__member {
   padding-bottom: 34px;
   width: 32%;
@@ -705,12 +719,17 @@ a {
 .team__member-name {
   padding-top: 17px;
   padding-bottom: 10px;
-  margin-left: -0.5px;
-  width: 300px;
 
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+@media only screen and (max-width: 1019px) {
+  .team__member-name {
+    padding-top: 11px;
+    padding-bottom: 4px;
+  }
 }
 
 .team__member-description {
@@ -721,6 +740,12 @@ a {
 
   text-align: justify;
   line-height: 2.1rem;
+}
+
+@media only screen and (max-width: 1019px) {
+  .team__member-description {
+    padding-bottom: 12px;
+  }
 }
 
 .social {
@@ -745,6 +770,13 @@ a {
   padding: 62px 40px 17px 40px;
 }
 
+@media only screen and (max-width: 1019px) {
+  .contact-us__content {
+    padding-top: 56px;
+    padding-bottom: 38px;
+  }
+}
+
 .contact-us__header {
 }
 
@@ -754,6 +786,12 @@ a {
 
   line-height: 3.0rem;
   text-align: justify;
+}
+
+@media only screen and (max-width: 1019px) {
+  .contact-us__text {
+    margin-bottom: 25px;
+  }
 }
 
 .contact-us__container {
@@ -769,6 +807,13 @@ a {
   flex-direction: column;
   flex-basis: 65.9%;
   flex-shrink: 0;
+}
+
+@media only screen and (max-width: 1019px) {
+  .quote {
+    padding-right: 28px;
+    flex-basis: 64.1%;
+  }
 }
 
 .quote__input,
@@ -792,6 +837,13 @@ a {
   height: 3rem;
 }
 
+@media only screen and (max-width: 1019px) {
+  .quote__input {
+    margin-bottom: 12px;
+    padding: 19px 15px 19px 8px;
+  }
+}
+
 .quote__textarea {
   margin-bottom: 15px;
   padding: 11px 15px;
@@ -800,11 +852,28 @@ a {
   resize: none;
 }
 
+@media only screen and (max-width: 1019px) {
+  .quote__textarea {
+    padding: 9px 9px;
+    height: 15.9rem;
+    margin-bottom: 16px;
+  }
+}
+
 .quote__submit {
   height: 3.5rem;
   width: 10rem;
 
   color: var(--color-quote);
+}
+
+@media only screen and (max-width: 1019px) {
+  .quote__submit {
+    height: 4rem;
+    width: 13.5rem;
+    padding-top: 4px;
+    font-size: 1.4rem;
+  }
 }
 
 .quote__input::placeholder,
@@ -858,11 +927,24 @@ a {
 
 }
 
+@media only screen and (max-width: 1019px) {
+  .contact-info__header {
+    padding-bottom: 2px;
+  }
+}
+
 .contact-info__text {
   margin: 1px 0 24px 0;
   line-height: 2.1rem;
 
   text-align: justify;
+}
+
+@media only screen and (max-width: 1019px) {
+  .contact-info__text {
+    margin-bottom: 11px;
+    line-height: 2.2rem;
+  }
 }
 
 .contacts__contact-link {
