@@ -3,7 +3,7 @@ const getByClassNames = (...classNames) => classNames.map(name => [...document.g
 
 
 /* Active nav links */
-const navLinks = getByClassNames('navigation__item-link');
+const navLinks = getByClassNames('navigation__item-link', 'nav-aside__item-link');
 const sections = [...document.getElementsByClassName('slider'), ...document.querySelectorAll('main > div')];
 const footer = document.querySelector('footer');
 
@@ -14,11 +14,13 @@ const changeLinkStateByScrolling = (e) => {
 
   let index = sections.length;
   let footerRect = footer.getBoundingClientRect();
-
-  if (Math.ceil(window.innerHeight - footerRect.bottom) === 0 ) {
+  if (!window.scrollY) {
+    index = 0;
+  } else if (Math.ceil(window.innerHeight - footerRect.bottom) === 0) {
     index = sections.length - 1;
   } else {
-    while (--index && ((window.innerHeight - sections[index].getBoundingClientRect().y) / window.innerHeight) * 100 < 65) {}
+    while (--index && ((window.innerHeight - sections[index].getBoundingClientRect().y) / window.innerHeight) * 100 < 65) {
+    }
   }
   changeLinkState(index);
 }
@@ -30,6 +32,7 @@ const changeLinkStateByClick = (e) => {
 const changeLinkState = (index) => {
   navLinks.forEach(link => link.classList.remove('active'));
   navLinks[index].classList.add('active');
+  navLinks[index > 4 ? index : index + 5].classList.add('active');
 }
 
 changeLinkStateByScrolling();
@@ -161,14 +164,14 @@ initGalleryPicturesEvents();
 
 
 /* Modal window */
-const modal = document.querySelector(".modal");
+const modal = document.querySelector('.modal');
 const form = document.querySelector('.quote');
 
 const windowOnClick = (e) => {
   if (e.target === modal) toggleModal()
 };
 
-const toggleModal = () => modal.classList.toggle("show-modal");
+const toggleModal = () => modal.classList.toggle('show-modal');
 
 const fillModal = () => {
   let subject = document.getElementById('subject').value;
@@ -187,5 +190,25 @@ const onFormSubmit = (e) => {
 };
 
 form.addEventListener('submit', onFormSubmit);
-document.querySelector(".close-button").addEventListener("click", toggleModal);
-window.addEventListener("click", windowOnClick);
+document.querySelector('.close-button').addEventListener('click', toggleModal);
+window.addEventListener('click', windowOnClick);
+
+
+// Hamburger
+const hamburger = document.getElementById('hamburger');
+const navAside = document.getElementById('nav-aside');
+
+const changeHamburgerState = (e) => {
+  hamburger.classList.toggle('hamburger--active');
+  navAside.classList.toggle('nav-aside_active');
+};
+
+hamburger.addEventListener('click', changeHamburgerState)
+
+const hideOnClick = (e) => {
+  e.target === navAside && changeHamburgerState(e);
+};
+
+navAside.addEventListener('click', hideOnClick)
+
+navLinks.slice((navLinks.length / 2)).forEach(el => el.addEventListener('click', changeHamburgerState));
