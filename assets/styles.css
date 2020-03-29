@@ -174,7 +174,7 @@ a {
 }
 
 .slider {
-  margin-top: 95px;
+  margin-top: 94px;
   border-bottom: 6px solid #ea676b;
   background-color: var(--color-active);
 }
@@ -217,7 +217,7 @@ a {
   background-color: #f2f2f2;
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 1019px) {
   .services,
   .about-us {
     border-bottom: none;
@@ -230,7 +230,7 @@ a {
 
 @media only screen and (max-width: 1019px) {
   .services__content {
-    padding: 42px 75px 19px 40px;
+    padding: 42px 75px 25px 40px;
   }
 }
 
@@ -296,6 +296,12 @@ a {
   list-style-type: none;
 }
 
+@media only screen and (max-width: 1019px) {
+  .navigation {
+    padding-top: 9px;
+  }
+}
+
 @media only screen and (max-width: 767px) {
   .navigation {
     display: none;
@@ -308,6 +314,12 @@ a {
   letter-spacing: -0.33px;
 
   text-transform: uppercase;
+}
+
+@media only screen and (max-width: 1019px) {
+  .navigation__item {
+    margin-left: 32px;
+  }
 }
 
 .navigation__item:not(:last-child)::after {
@@ -433,6 +445,7 @@ a {
 
 @media only screen and (max-width: 1019px) {
   .slider__left {
+    margin-top: 4px;
     left: calc(100vw * 42 / 1020);
   }
 }
@@ -452,6 +465,7 @@ a {
 
 @media only screen and (max-width: 1019px) {
   .slider__right {
+    margin-top: 4px;
     right: calc(100vw * 35 / 1020);
   }
 }
@@ -714,7 +728,7 @@ a {
 
 @media only screen and (max-width: 1019px) {
   .portfolio__content {
-    padding-bottom: 54px;
+    padding-bottom: 53px;
   }
 }
 
@@ -867,7 +881,7 @@ a {
 @media only screen and (max-width: 1019px) {
   .about-us__content {
     padding-top: 55px;
-    padding-bottom: 28px;
+    padding-bottom: 33px;
   }
 }
 
