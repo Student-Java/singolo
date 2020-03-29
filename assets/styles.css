@@ -554,6 +554,13 @@ a {
   z-index: 2;
 }
 
+.phone-hor__base:hover,
+.phone-hor__screen:hover,
+.phone-vert__base:hover,
+.phone-vert__screen:hover {
+  cursor: pointer;
+}
+
 .phone-hor__shadow {
   width: 483px;
   height: 240px;
