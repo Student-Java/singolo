@@ -1474,3 +1474,9 @@ a {
   color: var(--color-active);
 }
 
+.letter-subject {
+  width: 24rem;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
