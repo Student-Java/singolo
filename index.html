@@ -14,11 +14,14 @@
 <body>
 <header class="header">
   <div class="content header__content">
+    <span class="header__hamburger hamburger" id="hamburger">
+      <span class="hamburger__lines"></span>
+    </span>
     <a href="#">
       <h1 class="logo">singolo</h1>
     </a>
     <nav>
-      <ul class="navigation typo_size_sm typo_weight_700" id="nav-links">
+      <ul class="navigation typo_weight_700" id="nav-links">
         <li class="navigation__item">
           <a class="navigation__item-link" href="#">home</a>
         </li>
@@ -37,40 +40,52 @@
       </ul>
     </nav>
   </div>
+  <div id="nav-aside" class="side-menu">
+    <div class="side-menu__content">
+      <h1 class="logo-aside">singolo</h1>
+      <nav>
+        <ul class="nav-aside typo_size_sm typo_weight_700" id="nav-links">
+          <li class="nav-aside__item">
+            <a class="nav-aside__item-link" href="#">home</a>
+          </li>
+          <li class="nav-aside__item">
+            <a class="nav-aside__item-link" href="#services">services</a>
+          </li>
+          <li class="nav-aside__item">
+            <a class="nav-aside__item-link" href="#portfolio">portfolio</a>
+          </li>
+          <li class="nav-aside__item">
+            <a class="nav-aside__item-link" href="#about-us">about</a>
+          </li>
+          <li class="nav-aside__item">
+            <a class="nav-aside__item-link" href="#contact-us">contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
 </header>
 <main>
   <section class="slider">
+    <h2 class="visually-hidden">Gallery</h2>
     <div class="content slider__content">
-      <h2 class="visually-hidden">Gallery</h2>
       <span class="slider__left" id="left"></span>
       <div class="slider__slides">
         <div class="slide" id="slide-2">
           <div class="phone-vert">
-            <img class="phone-vert__shadow" src="assets/img/iphone_shadow.png" height="483" width="240" alt="iPhone shadow">
-            <img class="phone-vert__base" src="assets/img/iphone_base.png" height="458" width="215" alt="iPhone base">
-            <img class="phone-vert__screen" src="assets/img/iphone_screen_image_vert_.png" height="333" width="188" alt="iPhone screen image">
+            <img class="phone-vert__shadow" src="assets/img/iphone_shadow.png" alt="iPhone shadow">
+            <img class="phone-vert__base" src="assets/img/iphone_base.png" alt="iPhone base">
+            <img class="phone-vert__screen" src="assets/img/iphone_screen_image_vert_.png" alt="iPhone screen image">
           </div>
           <div class="phone-hor">
-            <img src="assets/img/iphone_shadow_hor.png" height="240" width="483" alt="iPhone shadow">
-            <img class="phone-hor__base" src="assets/img/iphone_base_hor.png" height="215" width="458" alt="iPhone base">
-            <img class="phone-hor__screen" src="assets/img/iphone_screen_image_hor_.png" height="188" width="333" alt="iPhone screen image">
+            <img class="phone-hor__shadow" src="assets/img/iphone_shadow_hor.png" alt="iPhone shadow">
+            <img class="phone-hor__base" src="assets/img/iphone_base_hor.png" alt="iPhone base">
+            <img class="phone-hor__screen" src="assets/img/iphone_screen_image_hor_.png" alt="iPhone screen image">
           </div>
         </div>
         <div class="slide" id="slide-3">
-          <div class="phone-left">
-            <img src="assets/img/iphone_shadow.png" height="314" width="156" alt="iPhone shadow">
-            <img src="assets/img/iphone_base.png" height="298" width="140" alt="iPhone base">
-            <img src="assets/img/iphone_screen_image_vert_.png" height="216" width="122" alt="iPhone screen image">
-          </div>
-          <div class="phone-middle">
-            <img src="assets/img/iphone_shadow.png" height="513" width="255" alt="iPhone shadow">
-            <img src="assets/img/iphone_base.png" height="486" width="229" alt="iPhone base">
-            <img src="assets/img/iphone_screen_image_vert_slide2.png" height="354" width="201" alt="iPhone screen image">
-          </div>
-          <div class="phone-right">
-            <img src="assets/img/iphone_shadow.png" height="314" width="156" alt="iPhone shadow">
-            <img src="assets/img/iphone_base.png" height="298" width="140" alt="iPhone base">
-            <img src="assets/img/iphone_screen_image_vert_.png" height="216" width="122" alt="iPhone screen image">
+          <div class="phone">
+            <img src="assets/img/second-slide-img.png" alt="Phone2">
           </div>
         </div>
       </div>
@@ -138,18 +153,18 @@
         <li class="tags__link tags__link-fourth">Artwork</li>
       </ul>
       <ul class="works">
-        <li class="works__work"><img src="assets/img/work_1.jpg" height="187" width="220" alt="work"></li>
-        <li class="works__work"><img src="assets/img/work_2.jpg" height="187" width="220" alt="work"></li>
-        <li class="works__work"><img src="assets/img/work_3.jpg" height="187" width="220" alt="work"></li>
-        <li class="works__work"><img src="assets/img/work_4.jpg" height="187" width="220" alt="work"></li>
-        <li class="works__work"><img src="assets/img/work_5.jpg" height="187" width="220" alt="work"></li>
-        <li class="works__work"><img src="assets/img/work_6.jpg" height="187" width="220" alt="work"></li>
-        <li class="works__work"><img src="assets/img/work_7.jpg" height="187" width="220" alt="work"></li>
-        <li class="works__work"><img src="assets/img/work_8.jpg" height="187" width="220" alt="work"></li>
-        <li class="works__work"><img src="assets/img/work_9.jpg" height="187" width="220" alt="work"></li>
-        <li class="works__work"><img src="assets/img/work_10.jpg" height="187" width="220" alt="work"></li>
-        <li class="works__work"><img src="assets/img/work_11.jpg" height="187" width="220" alt="work"></li>
-        <li class="works__work"><img src="assets/img/work_12.jpg" height="187" width="220" alt="work"></li>
+        <li class="works__work"><img src="assets/img/work_1.jpg" alt="work"></li>
+        <li class="works__work"><img src="assets/img/work_2.jpg" alt="work"></li>
+        <li class="works__work"><img src="assets/img/work_3.jpg" alt="work"></li>
+        <li class="works__work"><img src="assets/img/work_4.jpg" alt="work"></li>
+        <li class="works__work"><img src="assets/img/work_5.jpg" alt="work"></li>
+        <li class="works__work"><img src="assets/img/work_6.jpg" alt="work"></li>
+        <li class="works__work"><img src="assets/img/work_7.jpg" alt="work"></li>
+        <li class="works__work"><img src="assets/img/work_8.jpg" alt="work"></li>
+        <li class="works__work"><img src="assets/img/work_9.jpg" alt="work"></li>
+        <li class="works__work"><img src="assets/img/work_10.jpg" alt="work"></li>
+        <li class="works__work"><img src="assets/img/work_11.jpg" alt="work"></li>
+        <li class="works__work"><img src="assets/img/work_12.jpg" alt="work"></li>
       </ul>
     </div>
   </section>
@@ -162,7 +177,7 @@
         condimentum nibh.</p>
       <div class="team">
         <div class="team__member">
-          <img src="assets/img/adam_jensen.png" width="300" height="300" alt="Adam Jensen">
+          <img src="assets/img/adam_jensen.png" alt="Adam Jensen">
           <h3 class="team__member-name typo_size_md typo_color_headers typo_weight_900">Adam Jensen</h3>
           <p class="team__member-description typo_size_sm typo_weight_400 typo_color_main">Quisque luctus, quam eget molestie
             commodo, lacus purus cursus purus, nec rutrum tellus dolor id lorem.</p>
@@ -174,7 +189,7 @@
           </ul>
         </div>
         <div class="team__member">
-          <img src="assets/img/desmond_miles.png" width="300" height="300" alt="Desmond Miles<">
+          <img src="assets/img/desmond_miles.png" alt="Desmond Miles<">
           <h3 class="team__member-name typo_size_md typo_color_headers typo_weight_900">Desmond Miles</h3>
           <p class="team__member-description typo_size_sm typo_weight_400 typo_color_main">Curabitur vestibulum eget mauris quis
             laoreet. Phasellus in quam laoreet, viverra lacus ut, ultrices velit.</p>
@@ -186,15 +201,15 @@
           </ul>
         </div>
         <div class="team__member">
-          <img class="left_padding_fix_1px" src="assets/img/scolara_visari.png" width="300" height="300" alt="Scolara Visari">
+          <img src="assets/img/scolara_visari.png" alt="Scolara Visari">
           <h3 class="team__member-name typo_size_md typo_color_headers typo_weight_900">Scolara Visari</h3>
           <p class="team__member-description typo_size_sm typo_weight_400 typo_color_main">Nulla sed nunc et tortor luctus faucibus.
             Morbi at aliquet turpis, et consequat felis. Quisque condimentum.</p>
           <ul class="social">
-            <li><a href=""><img class="social__link" src="assets/img/facebook.png" height="32" width="32" alt="Facebook"></a></li>
-            <li><a href=""><img class="social__link" src="assets/img/google.png" height="32" width="32" alt="Google+"></a></li>
-            <li><a href=""><img class="social__link" src="assets/img/twitter.png" height="32" width="32" alt="Twitter"></a></li>
-            <li><a href=""><img class="social__link" src="assets/img/linkedIn.png" height="32" width="32" alt="LinkedIn"></a></li>
+            <li><a href=""><img class="social__link" src="assets/img/facebook.png" alt="Facebook"></a></li>
+            <li><a href=""><img class="social__link" src="assets/img/google.png" alt="Google+"></a></li>
+            <li><a href=""><img class="social__link" src="assets/img/twitter.png" alt="Twitter"></a></li>
+            <li><a href=""><img class="social__link" src="assets/img/linkedIn.png" alt="LinkedIn"></a></li>
           </ul>
         </div>
       </div>
@@ -218,7 +233,7 @@
           <label class="visually-hidden" for="description">Description: </label>
           <textarea class="quote__textarea" id="description" name="description" cols="30" rows="10" maxlength="1000"
                     placeholder="Describe your project in detail..."></textarea>
-          <input class="quote__submit typo_size_md typo_weight_700" type="submit" value="Submit">
+          <input class="quote__submit typo_size_md typo_weight_700" type="submit" value="SEND">
         </form>
         <div>
           <h3 class="contact-info__header typo_size_md typo_weight_900 typo_color_quote">Contact Information</h3>
